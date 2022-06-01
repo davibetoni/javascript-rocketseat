@@ -1,0 +1,1 @@
+Um breve resumo bem simples de cada tema tratado no curso do rocketseat
