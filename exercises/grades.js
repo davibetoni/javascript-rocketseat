@@ -10,28 +10,29 @@ numérico para sistema de notas em caracteres tipo A B C
 
 */
 
-let score1 = 91
-let score2 = 80
-let score3 = 70
-let score4 = 60
-let score5 = 59
-
 const grades = (score) => {
-  if (score >= 90) {
-    return 'A'
+  let final_score;
+  if (score >= 90 && score <= 100) {
+    final_score = 'A'
   } else if (score >= 80 && score < 90) {
-    return 'B'
+    final_score = 'B'
   } else if (score >= 70 && score < 80) {
-    return 'C'
+    final_score = 'C'
   } else if (score >= 60 && score < 70) {
-    return 'D'
+    final_score = 'D'
+  } else if (score < 60 && score >= 0) {
+    final_score = 'F'
   } else {
-    return 'F'
+    final_score = 'Nota inválida'
   }
+  return final_score
 }
 
-console.log(grades(score1))
-console.log(grades(score2))
-console.log(grades(score3))
-console.log(grades(score4))
-console.log(grades(score5))
+console.log(grades(84))
+console.log(grades(0))
+console.log(grades(-2))
+console.log(grades(91))
+console.log(grades(73))
+console.log(grades(59))
+console.log(grades(103))
+console.log(grades(65))
